@@ -1,0 +1,43 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: rgb(134, 241, 153);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon {
+  position: relative;
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Arial';
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  margin: 0;
+  padding: 0;
+  word-spacing: 100vw;
+  transform-origin: center bottom;
+  animation: tilt 3s infinite alternate;
+}
+
+.coming-soon::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(1.5rem);
+  content: 'Coming soon!';
+  color: rgba(0,0,0,0.125);
+  filter: blur(0.25rem);
+  z-index: -1;
+}
+
+@keyframes tilt {
+  from  {transform: rotate(-5deg);}
+  to {transform: rotate(5deg);}
+}

@@ -1,0 +1,37 @@
+body {
+  background-color: #38216b
+}
+
+.scene {
+  height: 100vh;
+  width: 540px;
+  margin: auto;
+}
+
+.titan {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 4px solid cornflowerblue;
+  background: radial-gradient(circle at 33% 33%, dodgerblue, royalblue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.titan::before,
+.titan::after {
+  content: '';
+  background-color: darkslategrey;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: blink 8s infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes blink {
+  0% { transform: scaleY(1) }
+  1% { transform: scaleY(0.1) }
+  2% { transform: scaleY(1) }
+}
