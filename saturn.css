@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  animation: titanfloat 2s ease infinite alternate;
+  animation: titanfloat 4s ease infinite alternate;
 }
 
 .titan::before,
